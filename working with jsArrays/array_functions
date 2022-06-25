@@ -1,0 +1,23 @@
+// Write a function that accepts and array and returns the total of the differences of each value in the array.
+// Given: [2, 6, 12, 19] it should return [4 + 6 + 7] -> 17
+array = [];
+function sumDelta(arr) {
+  let total = 0
+  for (let i = 1; i < arr.length; i++) {
+    let temp1 = arr[i - 1]
+    let temp2 = arr[i]
+    delta = Math.abs(temp1 - temp2)
+    total += delta;
+    console.log("temps: ", temp1, temp2, "deltas: ", delta)
+  }
+  console.log("The total difference is ", total);
+
+}
+
+// Consider the following when dealing with functions that take an array as argument:
+//1) What if the array is empty?
+//2) What if the array has just an element?
+//3) What if the array has only two elements?
+//4) What if there are many values?
+
+sumDelta(array)
